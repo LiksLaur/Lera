@@ -1,0 +1,116 @@
+.header {
+    background-color: #00BFA5; 
+    position: relative;
+    height: 600px; 
+    color: #FFFFFF; 
+}
+
+
+.logo {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 20px; 
+    z-index: 4;
+    width: 90px;
+}
+
+
+.header-text-area {
+    float: left;
+    width: 400px;
+    margin-top: 50px; 
+    margin-left: 200px; 
+}
+
+.service-title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.register-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+
+.icons-for-parallax {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+    height: 280px;
+    width: 280px;
+}
+
+.icons-for-parallax img {
+    position: absolute;
+    top: 0;
+}
+
+.icon-for-parallax-first {
+    width: 130px;
+    margin-top: 120px;
+    margin-left: 20px;
+    z-index: 3;
+}
+
+.icon-for-parallax-second {
+    width: 110px;
+    margin-top: 60px;
+    margin-left: 85px;
+    z-index: 2;
+}
+
+.icon-for-parallax-third {
+    width: 95px;
+    margin-top: 20px;
+    margin-left: 150px;
+    z-index: 1;
+}
+
+/* Основная часть страницы (список статей) */
+.content {
+    background-color: #FFFFFF;
+    color: #212121;
+    padding: 20px;
+}
+
+body { background-color: #00A896; font-family: Arial, sans-serif; margin: 20px; }
+.content { margin-top: 20px; }
+input[type="text"], textarea { width: 100%; margin-bottom: 10px; }
+.errors { color: red; }
+
+
+.one-post h2 a,
+.one-post .article-created-date {
+    color: white;
+}
+
+.content .one-post h2 a,
+.content .one-post .article-created-date {
+    color: #212121;
+}
+
+.one-post.folded .article-author,
+.one-post.folded .article-created-date,
+.one-post.folded .article-text {
+    display: none;
+}
+
+.one-post {
+    position: relative;
+}
+
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+}

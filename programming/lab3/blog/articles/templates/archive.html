@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Архив всех статей</title>
+</head>
+<body>
+
+    <div class="header">
+        <img src="{% static 'img/2023_04_VTRf8XTF-3_png.png' %}" alt="Логотип">
+    </div>
+
+    <div class="archive">
+        {% for post in posts %}
+            <div class="one-post">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">
+                        {{ post.created_date|date:"d E Y, H:i" }}
+                    </div>
+                </div>
+                <p class="article-text">{{ post.get_excerpt }}</p>
+            </div>
+        {% empty %}
+            <p>Пока статей нет.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

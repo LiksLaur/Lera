@@ -1,0 +1,25 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Архив всех статей</title>
+       <style>
+           body { background-color: #00A896; font-family: Arial, sans-serif; margin: 20px; }
+           .header { background-color: #00A896; color: white; padding: 10px; }
+           .post { background-color: #00A896; color: white; padding: 10px; margin-bottom: 10px; }
+       </style>
+   </head>
+   <body>
+       <div class="header">
+           <h1>Django public blog</h1>
+       </div>
+       <div>
+           {% for post in posts %}
+           <div class="post">
+               <h2><a href="{% url 'get_article' post.id %}" style="color: white;">{{ post.title }}</a></h2>
+               <p>Дата: {{ post.created_date }}</p>
+           </div>
+           {% endfor %}
+       </div>
+   </body>
+   </html>
+   
